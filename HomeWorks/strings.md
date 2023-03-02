@@ -3,17 +3,22 @@
 ## Задание 1
  1.1 Напишите функцию, которая принимает на вход строку и возвращает строку с заглавной буквой
  
+```
  INPUT:
  hello
+ 
  OUTPUT:
  Hello
+```
  
  1.2 Написать функцию, которая считает количество пробелов в строке
+```
     INPUT:
     This morning I get up at a half past six o’clock. It’s still dark. I feel tired.
     OUTPUT:
     16
- 
+```
+
  ## Задание 2
  2.1 Дана строка:
     let history = "History is always written by the winners! When two cultures clash, the loser is obliterated, and the winner writes the history books - books which glorify their own cause and disparage the conquered foe. As Napoleon once said, 'What is history, but a fable agreed upon?'"
@@ -35,14 +40,15 @@
 
  ## Задание 5
  
- Вам необходимо написать функцию, которая возвращает новую строку с чередующими заглавной и малой буквами. Функция должна принимать один параметр - строку. Все символы, кроме букв не должны быть подвержены изменению, но должны возвращаться в новой строке.\
-    INPUT:\
-    Привет, Мир! \
-    OUTPUT: \
-    ПрИвЕт, МиР! \
+ Вам необходимо написать функцию, которая возвращает новую строку с чередующими заглавной и малой буквами. Функция должна принимать один параметр - строку. Все символы, кроме букв не должны быть подвержены изменению, но должны возвращаться в новой строке.
+  
+    INPUT:
+    Привет, Мир! 
+    OUTPUT: 
+    ПрИвЕт, МиР! 
  
-    INPUT2: \
-    Lorem ipsum text \
-    OUTPUT2: \
-    LoReM IpSuM TeXt \
+    INPUT2: 
+    Lorem ipsum text 
+    OUTPUT2: 
+    LoReM IpSuM TeXt 
  */
