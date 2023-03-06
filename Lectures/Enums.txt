@@ -1,0 +1,165 @@
+import Foundation
+
+//https://www.atlassian.com/git/tutorials/install-git
+
+//Кортежи (tuple) - набор значений, которые
+//рассматриваются, как "Один объект"
+
+
+//Кортежи в свойствах
+// var userInfo = ("Adam", 30, 14500, "Proger")
+// print(userInfo)
+
+
+
+//Доступ по индексам
+
+// print(userInfo.0)
+
+//Наименование значений кортежа
+
+// var carModel = (model: "Focus", engine: 2.0)
+
+// print(carModel.model)
+
+//Изменение значений по индексам и по именам
+
+// userInfo.0 = "Alex"
+// carModel.model = "Raptor"
+// carModel.engine = 5.5
+// print(carModel)
+
+//Объявление пустого кортежа 
+//для дальнейшего его заполнения
+
+// var employeeInfo: (name: String, age: Int)
+// employeeInfo.name = "Tim"
+// employeeInfo.age = 45
+
+//Присвоение значений котрежа переменным
+// let (name, age) = employeeInfo
+// let (name, _) = employeeInfo
+// print(name)
+
+//Где используются кортежи?
+
+//В функциях
+
+// func getCountSymbolsOfWord(_ word: String) -> (word: String, countSymbolsOfWord: Int) {
+//     (word, word.count)
+// }
+// let countOfSymbols = getCountSymbolsOfWord("Hello").countSymbolsOfWord
+
+//В переборе словарей
+
+// let employeeInfo = [
+//     "Alex": 30,
+//     "Adam": 40,
+//     "Tim": 50
+// ]
+
+// for (name, age) in employeeInfo {
+//   print("Employee name = \(name) and age = \(age)")
+// }
+
+
+//Перечисления (Enums)
+
+// enum Month {
+//     case january
+//     case february
+//     case march
+//     case april
+//     case may
+//     case june
+//     case july
+//     case august
+//     case september
+//     case october
+//     case november
+//     case december
+// }
+
+//Использование инструкции Switch
+// var month: Month = .december
+// var month = Month.december
+
+// print(month) //декабрь
+
+//Исходные значения
+
+// enum Month: String {
+//     case january = "январь"
+//     case february = "февраль"
+//     case march = "март"
+//     case april
+//     case may
+//     case june
+//     case july
+//     case august
+//     case september
+//     case october
+//     case november
+//     case december
+// }
+
+// var month: Month = .january
+// print(month.rawValue)
+
+
+//Инициализация enumName(rawValue: value)
+
+// let month = Month(rawValue: "январь")
+
+// print(month!)
+
+//Неявно установленные исходные значения
+
+// enum Month: Int {
+//     case january
+//     case february
+//     case march
+//     case april
+//     case may
+//     case june
+//     case july
+//     case august
+//     case september
+//     case october
+//     case november
+//     case december
+// }
+
+// var month: Month = .january
+// print(month.rawValue)
+
+
+
+//Связанные значения (ассоциированные параметры)
+// enum Workday {
+//    case weekday(day: String, time: Int)
+//    case weekend
+// }
+
+// var workday: Workday = .weekend
+
+// switch workday {
+// case let .weekday(day, time):
+//    print("I have to get out on \(day) at \(time) o'clock")
+// case .weekend:
+//    print("Weekend!")
+// }
+
+
+//Итерация по кейсам
+
+enum Country: String, CaseIterable {
+  case russia = "Russia"
+  case usa = "USA"
+  case china = "China"
+  case germany = "Germany"
+}
+
+for country in Country.allCases {
+  print(country.rawValue)
+}
